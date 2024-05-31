@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+    <h1>Detalles del Libro</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Código</th>
+                <td th:text="${libro.idLibro}"></td>
+            </tr>
+            <tr>
+                <th>Título</th>
+                <td th:text="${libro.titulo}"></td>
+            </tr>
+            <tr>
+                <th>Autor</th>
+                <td th:text="${libro.autor}"></td>
+            </tr>
+            <tr>
+                <th>Año de Publicación</th>
+                <td th:text="${libro.anioPublicacion}"></td>
+            </tr>
+        </table>
+        <a th:href="@{/api/libreria/}">Volver a la lista de libros</a>
+    </div>
+</body>
+</html>
